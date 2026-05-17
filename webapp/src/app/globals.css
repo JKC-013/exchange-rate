@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card-bg: rgba(0, 0, 0, 0.8);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --primary: #ffffff;
+  --primary-hover: #cccccc;
+  --accent: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  
+  /* Interesting black and white dot pattern background */
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism/Panel utilities */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 0px; /* sharply squared for retro feel */
+  border: 1px solid var(--border-color);
+  box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel:hover {
+  box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.4);
+  transform: translate(-4px, -4px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Notebook iframe styles */
+.notebook-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white; /* Notebooks have mostly white bg by default */
+}
+
+/* Flipbook */
+.flipbook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.flipbook-page {
+  background-color: white;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.flipbook-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
