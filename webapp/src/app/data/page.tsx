@@ -64,14 +64,14 @@ export default function DataPage() {
 
   return (
     <div className="space-y-8 animate-fade-in uppercase">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-5xl font-bold tracking-widest">Interactive Dataset</h1>
-          <p className="text-gray-400 mt-2 text-2xl">1990 to 2019 Historic Exchange Rates</p>
+          <h1 className="text-3xl md:text-5xl font-bold tracking-widest">Interactive Dataset</h1>
+          <p className="text-gray-400 mt-2 text-lg md:text-2xl">1990 to 2019 Historic Exchange Rates</p>
         </div>
         
-        <div className="glass-panel px-6 py-3 flex items-center gap-4 border-2 border-white">
-          <label className="font-bold text-white text-xl">SELECT DATASET:</label>
+        <div className="glass-panel px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 border-2 border-white w-full md:w-auto">
+          <label className="font-bold text-white text-lg md:text-xl">SELECT DATASET:</label>
           <select 
             value={selectedDataset}
             onChange={(e) => setSelectedDataset(e.target.value)}
@@ -84,11 +84,11 @@ export default function DataPage() {
         </div>
       </div>
 
-      <div className="glass-panel p-6 w-full h-[600px] flex items-center justify-center relative border-4 border-white">
+      <div className="glass-panel p-2 md:p-6 w-full h-[400px] md:h-[600px] flex items-center justify-center relative border-4 border-white">
         {loading ? (
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 border-4 border-white border-t-transparent animate-spin mb-6"></div>
-            <p className="text-gray-400 font-bold text-2xl uppercase tracking-widest">LOADING DATASET...</p>
+            <div className="w-12 h-12 md:w-16 md:h-16 border-4 border-white border-t-transparent animate-spin mb-6"></div>
+            <p className="text-gray-400 font-bold text-lg md:text-2xl uppercase tracking-widest text-center">LOADING DATASET...</p>
           </div>
         ) : (
           <ResponsiveContainer width="100%" height="100%">

@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-6xl md:text-8xl font-bold uppercase tracking-widest">
           Exchange Rate Prediction
         </h1>
-        <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
           A COMPREHENSIVE 2024 FINAL REPORT ANALYZING AND COMPARING THE PERFORMANCE OF ARTIFICIAL NEURAL NETWORKS (ANN) AND LONG SHORT-TERM MEMORY (LSTM) MODELS ACROSS FOUR MAJOR CURRENCY INDEX DATASETS (1990-2019).
         </p>
       </div>
@@ -44,10 +44,10 @@ function FeatureCard({ title, description, icon, href }: { title: string, descri
         <div className="mb-6 border-2 border-white p-4">
           {icon}
         </div>
-        <h3 className="text-3xl font-bold mb-4 uppercase">{title}</h3>
-        <p className="text-gray-400 mb-8 flex-grow text-xl">{description}</p>
-        <div className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-auto text-2xl uppercase border-b-2 border-transparent group-hover:border-white pb-1">
-          Explore <ArrowRight size={24} />
+        <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase">{title}</h3>
+        <p className="text-gray-400 mb-8 flex-grow text-lg md:text-xl">{description}</p>
+        <div className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-auto text-xl md:text-2xl uppercase border-b-2 border-transparent group-hover:border-white pb-1">
+          Explore <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
         </div>
       </div>
     </Link>

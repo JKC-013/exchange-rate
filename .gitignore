@@ -1,0 +1,13 @@
+# Jupyter Notebook
+.ipynb_checkpoints/
+__pycache__/
+
+# Mac
+.DS_Store
+
+# Temporary python files
+*.pyc
+
+# Local environments
+env/
+venv/

@@ -23,13 +23,15 @@ export default function ReportPage() {
 
   return (
     <div className="space-y-6 animate-fade-in flex flex-col items-center uppercase">
-      <div className="w-full max-w-5xl text-center space-y-4 mb-8">
-        <h1 className="text-5xl font-bold tracking-widest">Project Report</h1>
-        <p className="text-gray-400 text-2xl">Interactive Flipbook of the 2024 Final Report</p>
-        <p className="text-lg text-white font-bold border border-white inline-block px-4 py-2 bg-white/5">CLICK ON THE CORNERS OR DRAG TO TURN PAGES.</p>
+      <div className="w-full max-w-5xl text-center space-y-4 mb-4 md:mb-8 mt-2 md:mt-0 px-2 md:px-0">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-widest">Project Report</h1>
+        <p className="text-gray-400 text-lg md:text-2xl">Interactive Flipbook of the 2024 Final Report</p>
+        <p className="text-sm sm:text-base md:text-lg text-white font-bold border border-white inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white/5">
+          CLICK ON THE CORNERS OR DRAG TO TURN PAGES.
+        </p>
       </div>
 
-      <div className="glass-panel p-6 w-full max-w-5xl flex justify-center shadow-2xl relative border-4 border-white">
+      <div className="glass-panel p-2 md:p-6 w-full max-w-5xl flex justify-center shadow-2xl relative border-4 border-white">
         {numPages > 0 ? (
           <Flipbook numPages={numPages} />
         ) : null}
